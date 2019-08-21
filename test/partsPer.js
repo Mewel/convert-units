@@ -2,6 +2,10 @@ var convert = require('../lib')
   , assert = require('assert')
   , tests = {};
 
+tests['ppm to permille'] = function () {
+  assert.strictEqual( convert(1).from('ppm').to('permille') , 0.001);
+};
+
 tests['ppm to ppm'] = function () {
   assert.strictEqual( convert(1).from('ppm').to('ppm') , 1);
 };

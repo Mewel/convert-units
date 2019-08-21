@@ -18,6 +18,10 @@ tests['C to F'] = function () {
   assert.strictEqual( convert(0).from('C').to('F'), 32);
 };
 
+tests['C- to F'] = function () {
+  assert.strictEqual( convert(10).from('C-').to('C'), -10);
+};
+
 tests['F to K'] = function () {
   assert.strictEqual( convert(32).from('F').to('K'), 273.15);
 };

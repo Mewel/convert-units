@@ -12,27 +12,27 @@ tests['m/s to km/h'] = function () {
   assert.strictEqual( convert(1).from('m/s').to('km/h') , 3.6);
 };
 
-tests['m/h to m/h'] = function () {
-  assert.strictEqual( convert(6).from('m/h').to('m/h') , 6);
+tests['mi/h to mi/h'] = function () {
+  assert.strictEqual( convert(6).from('mi/h').to('mi/h') , 6);
 };
 
-tests['m/h to knot'] = function () {
+tests['mi/h to knot'] = function () {
   var expected = 1.73795
-  var actual = convert(2).from('m/h').to('knot');
+  var actual = convert(2).from('mi/h').to('knot');
   assert.ok( percentError(expected, actual) < ACCURACY
     , 'Expected: ' + expected +', Actual: ' + actual);
 };
 
-tests['m/h to ft/s'] = function () {
+tests['mi/h to ft/s'] = function () {
     var expected = 4.4
-    var actual = convert(3).from('m/h').to('ft/s')
+    var actual = convert(3).from('mi/h').to('ft/s')
     assert.ok( percentError(expected, actual) < ACCURACY
       , 'Expected: ' + expected +', Actual: ' + actual);
 };
 
-tests['m/s to m/h'] = function () {
+tests['m/s to mi/h'] = function () {
     var expected = 22.3694
-    var actual = convert(10).from('m/s').to('m/h');
+    var actual = convert(10).from('m/s').to('mi/h');
     assert.ok( percentError(expected, actual) < ACCURACY
       , 'Expected: ' + expected +', Actual: ' + actual);
 }
@@ -44,9 +44,9 @@ tests['m/s to knot'] = function () {
       , 'Expected: ' + expected +', Actual: ' + actual);
 }
 
-tests['m/h to km/h'] = function () {
+tests['mi/h to km/h'] = function () {
     var expected = 19.3121
-    var actual = convert(12).from('m/h').to('km/h');
+    var actual = convert(12).from('mi/h').to('km/h');
     assert.ok( percentError(expected, actual) < ACCURACY
       , 'Expected: ' + expected +', Actual: ' + actual);
 }

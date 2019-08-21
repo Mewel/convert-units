@@ -65,4 +65,18 @@ tests['g to lb'] = function () {
     , 'Expected: ' + expected +', Actual: ' + actual);
 };
 
+tests['t to st'] = function () {
+  var expected = 1.10231
+      , actual = convert(1).from('t').to('st');
+  assert.ok( percentError(expected, actual) < ACCURACY
+      , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
+tests['t to lt'] = function () {
+  var expected = 0.98421
+      , actual = convert(1).from('t').to('lt');
+  assert.ok( percentError(expected, actual) < ACCURACY
+      , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
 module.exports = tests;
